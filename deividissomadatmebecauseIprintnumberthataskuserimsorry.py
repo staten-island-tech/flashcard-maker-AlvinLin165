@@ -10,15 +10,34 @@
         return list
 Calculator.add() """
 
-class Merchant:
-    def _init_(self, name, products):
+""" class Merchant:
+    def __init__(self, name, products):
         self.name = name
         self.products = products
     def sell(self, item):
         self.products.remove(item)
         print(self.products)
-Joanna = Merchant("Joanna", ['Chicken', 'prok', 'beef'])
-Joanna.sell('prok')
+
+Joanna = Merchant("Joanna", ['Chicken', 'pork', 'beef'])
+Joanna.sell('pork') """
+
+97%68 
+
+import json
+
+class g:
+    def f(y, x, z):
+        y.x = c
+        y.z = p
+    y = input("question: ")
+    x = input("answer: ")
+    z = input("image: ")
+    
+while y + x: 
+    break
+
+print(y)
+
 
 
 
