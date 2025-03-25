@@ -1,7 +1,7 @@
 
 """ class Calculator():
     def add(x,y):
-        print(x + y)
+       print(x + y)
         return x + y
     def add_many(list):
         print(sum(list))
@@ -21,22 +21,26 @@ Calculator.add() """
 Joanna = Merchant("Joanna", ['Chicken', 'pork', 'beef'])
 Joanna.sell('pork') """
 
-97%68 
 
 import json
 
-class g:
-    def f(y, x, z):
-        y.x = c
-        y.z = p
-    y = input("question: ")
-    x = input("answer: ")
-    z = input("image: ")
-    
-while y + x: 
+class Teacher:
+    def make_cards():
+        y = input("quesiton: ")
+        g = input("answer: ")
+        p = {}
+        p[y] = g
+        with open("FlashCards.json", "w") as file:
+            json.dump(p, file, indent = 4)
+
+Teacher.make_cards()
+
+for movie in movies:
     break
 
-print(y)
+
+
+
 
 
 
