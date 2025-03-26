@@ -26,18 +26,40 @@ import json
 
 class Teacher:
     def make_cards():
-        y = input("quesiton: ")
-        g = input("answer: ")
+        want = input("want make cards? ")
+
         p = {}
-        p[y] = g
+
+        if want == "yes":
+            y = input("quesiton: ")
+            g = input("answer: ")
+            p[y] = g
+        else:
+            print("no more")
+
+
+        while want == "yes":
+            want = input("want to make? ")
+            if want == "yes":
+                y = input("quesiton: ")
+                g = input("answer: ")
+                p[y] = g
+            else:
+                print("no")
+
         with open("FlashCards.json", "w") as file:
-            json.dump(p, file, indent = 4)
+                json.dump(p, file, indent = 4)
+        
+
 
 Teacher.make_cards()
 
-for movie in movies:
-    break
-
+class Student:
+    def answer_question():
+        a = input("answer now: ")
+        with open("FlashCards.json") as file:
+            if a == a:
+                print("correct")
 
 
 
