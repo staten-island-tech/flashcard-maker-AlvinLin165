@@ -24,6 +24,7 @@ Joanna.sell('pork') """
 
 import json
 
+
 class Teacher:
     def make_cards():
         want = input("want make cards? ")
@@ -45,22 +46,23 @@ class Teacher:
                 g = input("answer: ")
                 p[y] = g
             else:
-                print("no")
+                print("ok stop")
 
         with open("FlashCards.json", "w") as file:
                 json.dump(p, file, indent = 4)
-        
-
 
 Teacher.make_cards()
+
 
 class Student:
     def answer_question():
         a = input("answer now: ")
         with open("FlashCards.json") as file:
-            if a == a:
+            if:
                 print("correct")
-
+            else:
+                print("wrong")
+Student.answer_question()
 
 
 
