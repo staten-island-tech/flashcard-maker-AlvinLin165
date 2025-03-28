@@ -26,6 +26,7 @@ import json
 
 
 class Teacher:
+
     def make_cards():
         want = input("want make cards? ")
 
@@ -55,13 +56,18 @@ Teacher.make_cards()
 
 
 class Student:
+    
     def answer_question():
-        a = input("answer now: ")
         with open("FlashCards.json") as file:
-            if:
+            d = json.load(file)
+
+        for card in d:
+            print(f"question: {card}")
+            k = input("what the answer: ")
+            if k == d:
                 print("correct")
-            else:
-                print("wrong")
+        else:
+            print("wrong")
 Student.answer_question()
 
 
