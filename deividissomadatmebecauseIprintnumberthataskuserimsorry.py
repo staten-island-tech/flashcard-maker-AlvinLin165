@@ -64,7 +64,7 @@ class Student:
         for card in d:
             print(f"question: {card}")
             k = input("what the answer: ")
-            if k == d:
+            if k == d():
                 print("correct")
         else:
             print("wrong")
