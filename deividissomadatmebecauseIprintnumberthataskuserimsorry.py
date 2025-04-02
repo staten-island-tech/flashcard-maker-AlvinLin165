@@ -58,16 +58,21 @@ Teacher.make_cards()
 class Student:
     
     def answer_question():
+        s = 0
         with open("FlashCards.json") as file:
             d = json.load(file)
 
         for card in d:
             print(f"question: {card}")
             k = input("what the answer: ")
-            if k == d():
+            if k == k:
                 print("correct")
-        else:
-            print("wrong")
+                s += 1
+                print(f"streaK: {s}")
+            else:
+                print("wrong")
+                s = 0 
+                
 Student.answer_question()
 
 
