@@ -30,12 +30,14 @@ class Teacher:
     def make_cards():
         want = input("want make cards? ")
 
-        p = {}
 
         if want == "yes":
             y = input("quesiton: ")
             g = input("answer: ")
-            p[y] = g
+            p = {
+                "quesiton": y,
+                "answer": g
+            }
         else:
             print("no more")
 
@@ -45,7 +47,7 @@ class Teacher:
             if want == "yes":
                 y = input("quesiton: ")
                 g = input("answer: ")
-                p[y] = g
+
             else:
                 print("ok stop")
 
@@ -62,9 +64,10 @@ class Student:
         with open("FlashCards.json") as file:
             d = json.load(file)
 
-        for card in d:
-            print(f"question: {card}")
+        for quesiton in d:
+            print(quesiton)
             k = input("what the answer: ")
+
             if k == k:
                 print("correct")
                 s += 1
