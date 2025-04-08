@@ -30,18 +30,20 @@ class Teacher:
     def make_cards():
         p = {}
         while True:
-            want = input("want make cards? ")
+            want = input("want to make cards? ")
             if want == "yes":
                 y = input("quesiton: ")
                 g = input("answer: ")
+                print("---------------------------------------")
                 p[y] = g
             else:
-                print("no more")
+                print("no more cards")
+                print("---------------------------------------")
                 break
         with open("FlashCards.json", "w") as file:
             json.dump(p, file, indent = 4)
 
-Teacher.make_cards()
+
 
 class Student:
 
@@ -51,21 +53,28 @@ class Student:
         with open("FlashCards.json", "r") as file:
             d = json.load(file)
 
-        for card in d:
-            print(card)
+        for card, c in d.items():
+            print(f"quesiton: {card}")
             k = input("what the answer: ")
 
-            if k == card:
-                print("correct")
+            if k == c:
                 s += 1
-                print(f"streaK: {s}")
+                print(f"correct, streaK: {s}")
+                print("---------------------------------------")
 
             else:
-                print("wrong")
-                print(f"streak = {s}, now rested to 0")
+
+                print(f"wrong, streak = {s}, now resetted to 0")
+                print("---------------------------------------")
                 s = 0 
                 
-Student.answer_question()
+t = input("teacher or student?")
+
+if t == "teacher":
+    Teacher.make_cards()
+
+elif t == "student":
+    Student.answer_question()
 
 
 
